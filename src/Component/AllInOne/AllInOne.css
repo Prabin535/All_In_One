@@ -1,0 +1,748 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    height: 100px;
+    background-color: purple;
+    border: 2px solid aqua;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.heading{
+    padding: 5px 10px;
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    border: 2px solid aqua;
+    border-radius: 20px 20px;
+    text-align: center;
+    transition: transform 0.8s ease-in-out;
+}
+.heading:hover{
+    transform: scale(1.05);
+    color: aqua;
+    border: 2px solid aliceblue;
+}
+.section1{
+    width: 100%;
+    height: 618px;
+    position: relative;
+}
+
+.section1a{
+    width: auto;
+    height: auto;
+    /* background-color:rgba(245, 241, 241, 0.44);
+    border: 5px solid rgba(245, 241, 241, 0.44);
+    box-shadow: -5px 10px 15px rgba(217, 212, 212, 0.44); */
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content:space-evenly;
+    position: relative;
+
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    color:black;
+}
+.contentBtn{
+    width: 150px;
+    height: min-content;
+    background-color: rgba(236, 229, 236, 0.784);
+    border: 5px solid rgba(225, 213, 225, 0.727);
+    box-shadow: -5px -5px 10px rgba(220, 206, 220, 0.689);
+    border-radius: 10px;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10%;
+    margin-top: 30%;
+    margin-left: -7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+.contentBtn:hover{
+    background-color:purple;
+    border: 5px solid purple;
+    box-shadow:none;
+    color: aliceblue;
+    transform: scale(1.1);
+}
+.icon{
+    padding: 10px;
+}
+.section1b{
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    background-color:aliceblue;
+    position: absolute;
+    top:0px;
+    display: block;
+}
+.backBtn{
+    width: max-content;
+    margin:2% 2%;
+    color: aliceblue;
+    background-color: rgba(69, 68, 69, 0.784);
+    border: 2px solid rgba(69, 68, 69, 0.784);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+.backBtn:hover{
+    background-color: purple;
+    border: 2px solid purple;
+    color: aliceblue;
+    transform: scale(1.05) translate(0% , 10%);
+}
+.iconBack{
+    padding-top: 2px;
+    padding-right: 5px;
+    
+}
+.calculatorSection{
+    width: 500px;
+    height: 300px;
+    margin: 0px auto;
+    padding:5px;
+    padding-bottom: 15px;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px rgb(76, 67, 67);
+    
+}
+
+.calculatorSection1{
+    width: inherit;
+    height: 20%;
+    margin: 5px auto;
+    /* background-color: aqua; */
+}
+.calculatorSection2{
+    width: inherit;
+    height: 80%;
+    margin: 5px auto;
+    text-align: center;
+    
+}
+.calInput{
+    width: 96%;
+    height: 88%;
+    margin: 0px 5px;
+    background-color: snow;
+    color: purple;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 40px;
+    text-align: right;
+    overflow: hidden;
+}
+.calcBtn1{
+    width: 19%;
+    height: 95%;
+    margin: 2px;
+    background-color: snow;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+.calcBtn1:hover{
+    color: aliceblue;
+    background-color: black;
+    border: 2px solid snow;
+}
+
+.btnRow1{
+    width: 100%;
+    height: 24%;
+}
+.converterSection{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-evenly;
+}
+.converterSection1{
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+.converterSection1a{
+    width: 40%;
+    height: max-content;
+    margin: 0px auto;
+    background-color:rgba(245, 241, 241, 0.44);
+    border: 5px solid rgba(245, 241, 241, 0.44);
+    box-shadow: -5px 10px 15px rgba(217, 212, 212, 0.44);
+    padding: 10px;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    
+}
+
+.converterSection1a1,.converterSection1a2,.converterSection1a3,.converterSection1a4{
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputConverter{
+    width: 150px;
+    height: 50px;
+    color: purple;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+#dobError{
+    text-align: center;
+    color: red;
+    font-size: 14px;
+}
+.convBtn{
+    width: max-content;
+    height: max-content;
+    padding: 5px;
+    background-color: snow;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.convBtn:hover{
+    background-color: black;
+    color: aliceblue;
+    
+}
+.converterCurrency1{
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+.converterCurrency1a{
+    width: 60%;
+    height: max-content;
+    margin: 0px auto;
+    background-color:rgba(245, 241, 241, 0.44);
+    border: 5px solid rgba(245, 241, 241, 0.44);
+    box-shadow: -5px 10px 15px rgba(217, 212, 212, 0.44);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
+.converterCurrency1a1,.converterCurrency1a2,.converterCurrency1a3{
+    width: 800px;
+    margin: 10px auto;
+    margin-left: -3%;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.inputConverterCurrency{
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    color: purple;
+    background-color: rgba(204, 205, 206, 0.422);
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.currentTimeSection{
+    width: 60%;
+    height: max-content;
+    margin: 0px auto;
+    background-color:rgba(245, 241, 241, 0.44);
+    border: 5px solid rgba(245, 241, 241, 0.44);
+    box-shadow: -5px 10px 15px rgba(217, 212, 212, 0.44);
+    padding: 10px;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+}
+.clockAnalog{
+    width: 250px;
+    height: 250px;
+    background-color: purple;
+    color: aliceblue;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.clockAnalogHour{
+    width: 5px;
+    height: 120px;
+    border-radius: 20px;
+    position: absolute;
+    top: 65px;
+    left: 123px;
+    transition: transform 0s;
+    transform: rotate(0deg);
+    display: grid;
+    
+}
+.clockAnalogHour1{
+    background-color: aqua;
+    border-radius: 20px;
+}
+.clockAnalogHour2{
+    
+    background-color:aqua;
+    visibility: hidden;
+}
+.clockAnalogMinute{
+    width: 3px;
+    height: 150px;
+    position: absolute;
+    top: 50px;
+    left: 124px;
+    transition: transform 0s;
+    transform: rotate(0deg);
+    display: grid;
+}
+.clockAnalogMinute1{
+    background-color: aqua;
+    border-radius: 20px;
+}
+.clockAnalogMinute2{
+    background-color:aqua;
+    visibility: hidden;
+}
+.clockAnalogSecond{
+    width: 2px;
+    height: 180px;
+    position: absolute;
+    top: 35px;
+    left: 125px;
+    transition: transform 0s;
+    display: grid;
+}
+.clockAnalogSecond1{
+    background-color: red;
+    border-radius: 20px;
+}
+.clockAnalogSecond2{
+    background-color:aqua;
+    visibility: hidden;
+    
+}
+.clockCenter{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    position: absolute;
+    top: 120px;
+    left: 120px;
+}
+.twelve{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:0%;
+    left: 44%;
+}
+.eleven{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:6%;
+    left: 20%;
+}
+.one{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:7%;
+    right: 21%;
+}
+.ten{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:22%;
+    left: 6%;
+}
+.two{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:23%;
+    right: 7%;
+}
+.nine{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:44%;
+    left: 3%;
+}
+.eight{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:65%;
+    left: 10%;
+}
+.four{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:65%;
+    right: 10%;
+}
+.three{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:44%;
+    right: 3%;
+}
+.five{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:80%;
+    right: 25%;
+}
+.seven{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    top:80%;
+    left: 25%;
+}
+.six{
+    font-size: 30px;
+    font-family: sans-serif;
+    position: absolute;
+    bottom:0%;
+    right: 46%;
+}
+.clockDigital{
+    width: 200px;
+    margin: 10px auto;
+    color: purple;
+    font-size: 30px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.selectRegion{
+    width: 250px;
+    margin: 10px auto;
+    font-size: 30px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.typingTestSection{
+    width: 50%;
+    height: max-content;
+    margin: 0px auto;
+    background-color:rgba(245, 241, 241, 0.44);
+    border: 5px solid rgba(245, 241, 241, 0.44);
+    box-shadow: -5px 10px 15px rgba(217, 212, 212, 0.44);
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    display: grid;
+}
+.timeSection{
+    width: 500px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.textSection{
+    width: 60%;
+    height: 80px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: justify;
+    font-size: 20px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typingSection{
+    width: 62%;
+    height: 100px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#typingArea{
+    outline: none;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+}
+.btnSection{
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.typingTestError{
+    font-size: 30px;
+}
+.todoSection{
+    width: 50%;
+    height: max-content;
+    margin: 0px auto;
+    background-color:rgba(245, 241, 241, 0.44);
+    border: 5px solid rgba(245, 241, 241, 0.44);
+    box-shadow: -5px 10px 15px rgba(217, 212, 212, 0.44);
+    padding: 10px;
+    border-radius: 20px;
+    display: grid;
+}
+
+.inputTodo{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnTodo{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputTag{
+    width: 250px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.submitBtn{
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: lawngreen;
+}
+.submitBtn:hover{
+    background-color: rgba(126, 252, 0, 0.911);
+    color: rgb(62, 63, 65);
+}
+.noTask{
+    display: none;
+}
+li{
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type:disc;
+}
+.deleteBtn{
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: aliceblue;
+}
+.deleteBtn:hover{
+    color: rgb(196, 199, 202);
+    background-color: rgba(255, 0, 0, 0.629);
+}
+.editBtn{
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: yellow;
+}
+.editBtn:hover{
+    color: rgb(94, 93, 93);
+    background-color: rgba(255, 255, 0, 0.68);
+}
+.approvedBtn{
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: springgreen;
+}
+.approvedBtn:hover{
+    color: rgb(72, 72, 72);
+    background-color: rgba(1, 211, 120, 0.755);
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media screen and (max-width: 1250px) {
+    .section1a {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      justify-content: space-evenly;
+      margin-left: -2%;
+    }
+    .converterSection{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .converterCurrency1a{
+        width: 50%;
+    }
+    .converterCurrency1a1,.converterCurrency1a2,.converterCurrency1a3{
+        margin-left: 0%;
+    }
+    .inputConverterCurrency{
+        width: 80%;
+    }
+  }
+@media screen and (max-width: 850px) {
+    .section1a {
+      display: grid;
+      grid-template-columns: auto auto auto ;
+      justify-content: space-evenly;
+      margin-left: -2%;
+    }
+    .converterSection{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+  }
+
+@media screen and (max-width: 700px) {
+    .section1a {
+        display: grid;
+        grid-template-columns: auto auto ;
+        justify-content: space-evenly;
+        margin-left: -2%;
+    }
+    .section1b{
+        height: 1500px;
+    }
+    .calculatorSection{
+        width: 240px;
+        height: 250px;
+    }
+    .calInput{
+        width: 96%;
+        margin-left: -0.5%;
+    }
+    .calcBtn1{
+        width: 40px;
+        font-size: 20px;
+    }
+    .converterSection{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .converterSection1a1,.converterSection1a2,.converterSection1a3,.converterSection1a4{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .converterCurrency1{
+        width: 100%;
+        height: 1500px;
+    }
+    .converterCurrency1a{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    .converterCurrency1a1,.converterCurrency1a2,.converterCurrency1a3{
+        width: 100%;
+    }
+    .inputConverterCurrency{
+        width: 90%;
+    }
+  }
+@media screen and (max-width: 460px) {
+    .section1a {
+      display: grid;
+      grid-template-columns: auto ;
+      margin-left: -5%;
+    }
+    .section1b{
+        height: 1500px;
+    }
+    .converterSection{
+        display: grid;
+        grid-template-columns: auto ;
+    }
+    .converterCurrency1a1,.converterCurrency1a2,.converterCurrency1a3{
+        width: 100%;
+    }
+    
+    .inputConverterCurrency{
+        width: 90%;
+    }
+    .currentTimeSection{
+        background-color:transparent;
+        border: 5px solid transparent;
+        box-shadow: -5px 10px 15px transparent;
+    }
+  }
