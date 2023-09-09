@@ -225,18 +225,19 @@ a{
     font-size: 14px;
 }
 .convBtn{
-    width: max-content;
-    height: max-content;
-    padding: 5px;
     background-color: snow;
-    border: 2px solid black;
-    border-radius: 10px;
-    font-size: 20px;
+    padding-block: 10px;
+    padding-inline: 50px;
+    font-size: 25px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0px 5px 5px #c4ced8,
+    -5px 0px 5px rgba(60, 61, 60, 0.764);
 }
 .convBtn:hover{
-    background-color: black;
-    color: aliceblue;
-    
+    box-shadow: inset 5px 0px 5px #c4ced8,
+    inset 0px -5px 5px rgba(60, 61, 60, 0.764);
+    cursor: pointer;
 }
 .converterCurrency1{
     position: absolute;
@@ -637,6 +638,26 @@ li{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+.timerCount{
+    font-size: 150px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #3a023a9e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.countMiliSec{
+    height: 100%;
+    font-size: 100px;
+    align-self: flex-end;
+}
+.btnDiv{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 @media screen and (max-width: 1250px) {
     .section1a {
