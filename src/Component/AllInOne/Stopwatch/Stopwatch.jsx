@@ -1,10 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import BackBtn from "../BackBtn";
+import Layout from "../Layout";
 
 export default function Stopwatch() {
-  const MILLISECONDS_PER_SECOND = 60;
-  const SECONDS_PER_MINUTE = 60;
-  const MINUTES_PER_HOUR = 60;
+  const exactTime = 60;
   const [countMiliSec, setCountMiliSec] = useState(0);
   const [countSec, setCountSec] = useState(0);
   const [countMin, setCountMin] = useState(0);
@@ -28,15 +27,15 @@ export default function Stopwatch() {
   }, [timer]);
 
   useEffect(() => {
-    if (timer && countMiliSec === MILLISECONDS_PER_SECOND) {
+    if (timer && countMiliSec === exactTime) {
       setCountMiliSec(0);
       setCountSec((c) => c + 1);
 
-      if (countSec === SECONDS_PER_MINUTE) {
+      if (countSec === exactTime) {
         setCountSec(0);
         setCountMin((c) => c + 1);
 
-        if (countMin === MINUTES_PER_HOUR) {
+        if (countMin === exactTime) {
           setCountMin(0);
           setCountHour((c) => c + 1);
         }
@@ -45,8 +44,9 @@ export default function Stopwatch() {
   }, [timer, countMiliSec, countSec, countMin]);
 
   return (
+    <Layout>
     <div className="section1b">
-      <BackBtn back={"/"} />
+      <BackBtn back="/" />
       <div className="timerCount">
         {countHour.toString().padStart(2, "0")}:
         {countMin.toString().padStart(2, "0")}:
@@ -64,5 +64,6 @@ export default function Stopwatch() {
         </button>
       </div>
     </div>
+    </Layout>
   );
 }

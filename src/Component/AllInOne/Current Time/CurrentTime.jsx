@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useLayoutEffect } from "react";
 import BackBtn from "../BackBtn";
 import TimeZones from "./TimeZones";
+import Layout from "../Layout";
 
 const CurrentTime = () => {
   function getTime(timezone) {
@@ -64,6 +65,7 @@ const CurrentTime = () => {
   }, [currentSeconds, currentMinutes, currentHours]);
 
   return (
+    <Layout>
     <div className="section1b">
       <BackBtn back={"/"} />
       <div className="currentTimeSection">
@@ -107,20 +109,9 @@ const CurrentTime = () => {
           <span className="one">1</span>
         </div>
         <div className="clockDigital">
-          {/* <span>{currentHours}</span>:<span>{currentMinutes}</span>:<span>{currentSeconds}</span> */}
           {date}
           {actualTime}
         </div>
-        {/* <div className='clockDigital'>
-          <span>{new Date().getDate()}</span>
-          <span>-</span>
-          <span>{new Date().getMonth()+1}</span>
-          <span>-</span>
-          <span>{new Date().getFullYear()}</span>
-        </div> */}
-        {/* <div className='clockDigital'>
-          {day}
-        </div> */}
         <div className="selectRegion">
           <select
             className="inputConverterCurrency"
@@ -132,6 +123,7 @@ const CurrentTime = () => {
         </div>
       </div>
     </div>
+    </Layout>
   );
 };
 

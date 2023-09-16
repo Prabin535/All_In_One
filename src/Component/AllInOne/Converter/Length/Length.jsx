@@ -1,10 +1,11 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import BackBtn from "../../BackBtn";
+import Layout from "../../Layout";
 
 const Length = () => {
-  let [inputKilometer,setInputKilometer]=useState('');
-  let [inputMeter,setInputMeter]=useState('');
-  let [inputCentimeter,setInputCentimeter]=useState('');
+  let [inputKilometer, setInputKilometer] = useState("");
+  let [inputMeter, setInputMeter] = useState("");
+  let [inputCentimeter, setInputCentimeter] = useState("");
 
   function onInputKilometer(event) {
     setInputMeter(event.target.value * 1000);
@@ -22,45 +23,47 @@ const Length = () => {
     setInputCentimeter(event.target.value);
   }
   return (
-    <div className="converterCurrency1">
-      <BackBtn back={"/Converter"} />
-      <div className="converterCurrency1a">
-        <div className="converterCurrency1a1">
-          <label className="inputConverterCurrency">Kilometer</label>
-          <input
-            type="text"
-            name="select1"
-            placeholder="Km"
-            className="inputConverterCurrency"
-            value={inputKilometer}
-            onInput={onInputKilometer}
-          />
-        </div>
+    <Layout>
+      <div className="converterCurrency1">
+        <BackBtn back={"/Converter"} />
+        <div className="converterCurrency1a">
+          <div className="converterCurrency1a1">
+            <label className="inputConverterCurrency">Kilometer</label>
+            <input
+              type="text"
+              name="select1"
+              placeholder="Km"
+              className="inputConverterCurrency"
+              value={inputKilometer}
+              onInput={onInputKilometer}
+            />
+          </div>
 
-        <div className="converterCurrency1a2">
-          <label className="inputConverterCurrency">Meter</label>
-          <input
-            type="text"
-            name="select2"
-            placeholder="m"
-            className="inputConverterCurrency"
-            value={inputMeter}
-            onInput={onInputMeter}
-          />
-        </div>
-        <div className="converterCurrency1a3">
-          <label className="inputConverterCurrency">Centimeter</label>
-          <input
-            type="text"
-            name="select2"
-            placeholder="cm"
-            className="inputConverterCurrency"
-            value={inputCentimeter}
-            onInput={onInputCentimeter}
-          />
+          <div className="converterCurrency1a2">
+            <label className="inputConverterCurrency">Meter</label>
+            <input
+              type="text"
+              name="select2"
+              placeholder="m"
+              className="inputConverterCurrency"
+              value={inputMeter}
+              onInput={onInputMeter}
+            />
+          </div>
+          <div className="converterCurrency1a3">
+            <label className="inputConverterCurrency">Centimeter</label>
+            <input
+              type="text"
+              name="select2"
+              placeholder="cm"
+              className="inputConverterCurrency"
+              value={inputCentimeter}
+              onInput={onInputCentimeter}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

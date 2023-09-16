@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useRef } from "react";
 import BackBtn from "../BackBtn";
+import Layout from "../Layout";
 
 
 const TaskReminder = () => {
@@ -46,6 +47,7 @@ const TaskReminder = () => {
     setTask([...task]);
   }
   return (
+    <Layout>
     <div className="section1b">
       <BackBtn back={'/'} />
       <div className="todoSection">
@@ -99,6 +101,7 @@ const TaskReminder = () => {
       </ul>
     </div>
     </div>
+    </Layout>
   );
 }
 

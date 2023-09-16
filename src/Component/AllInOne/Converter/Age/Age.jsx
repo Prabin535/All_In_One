@@ -2,12 +2,14 @@ import React from "react";
 import { useState } from "react";
 import BackBtn from "../../BackBtn";
 import ConvBtn from "../ConvBtn";
+import Layout from "../../Layout";
 
 const Age = () => {
   let [userInput, setUserInput] = useState(0);
   let newDob = new Date(userInput);
   let [age, setAge] = useState();
   let [nextBirthDay, setNextBirthDay] = useState();
+  const currentDate = new Date();
 
   function getAge() {
     if (userInput === 0 || userInput === "") {
@@ -84,32 +86,35 @@ const Age = () => {
   }
 
   return (
-    <div className="converterSection1">
-      <BackBtn back={"/Converter"} />
-      <div className="converterSection1a">
-        <div className="converterSection1a1">
-          <h3 className="inputConverter">DOB :</h3>
-          <input
-            type="date"
-            id="dob"
-            className="inputConverter"
-            onChange={(event) => setUserInput(event.target.value)}
-          />
+    <Layout>
+      <div className="converterSection1">
+        <BackBtn back={"/Converter"} />
+        <div className="converterSection1a">
+          <div className="converterSection1a1">
+            <h3 className="converterText">DOB :</h3>
+            <input
+              type="date"
+              id="dob"
+              className="inputConverter"
+              onChange={(event) => setUserInput(event.target.value)}
+              max={currentDate.toISOString().split("T")[0]}
+            />
+          </div>
+          <div className="converterSection1a2">
+            <h3 className="converterText">Age :</h3>
+            <h3 className="converterText">{age}</h3>
+          </div>
+          <div className="converterSection1a3">
+            <h3 className="converterText">Next Birthday :</h3>
+            <h3 className="converterText">{nextBirthDay}</h3>
+          </div>
+          <div className="converterSection1a4">
+            <ConvBtn text={"Calculate"} onclick={getAge} clas={"convBtn"} />
+          </div>
+          <p id="dobError"></p>
         </div>
-        <div className="converterSection1a2">
-          <h3 className="inputConverter">Age :</h3>
-          <h3 className="inputConverter">{age}</h3>
-        </div>
-        <div className="converterSection1a3">
-          <h3 className="inputConverter">Next Birthday :</h3>
-          <h3 className="inputConverter">{nextBirthDay}</h3>
-        </div>
-        <div className="converterSection1a4">
-          <ConvBtn text={"Calculate"} onclick={getAge} clas={"convBtn"} />
-        </div>
-        <p id="dobError"></p>
       </div>
-    </div>
+    </Layout>
   );
 };
 
